@@ -31,6 +31,11 @@ class ClickHouseQuery implements \Stringable
         return $this->interpolateQueryService ?? new DefaultInterpolateQueryService();
     }
 
+    public function getRawQuery(): string
+    {
+        return $this->query;
+    }
+
     public function getQuery(): string
     {
         return $this->interpolatedQuery ??= $this->buildQuery();
