@@ -17,7 +17,6 @@ final readonly class ClickHouseResult implements \IteratorAggregate, \Countable
         private ?int   $bytesRead = null,
     )
     {
-
     }
 
     public function rows(): array
