@@ -1,0 +1,39 @@
+{
+    "name": "denywhite/clicklink",
+    "description": "ClickHouse Client and light ORM",
+    "type": "library",
+    "license": "MIT",
+    "version": "0.1.0",
+    "autoload": {
+        "psr-4": {
+            "DenyWhite\\ClickLink\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DenyWhite\\ClickLink\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Denis Belov"
+        }
+    ],
+    "require": {
+        "php": ">=8.3",
+        "ext-curl": "*",
+        "guzzlehttp/guzzle": "^7.0",
+        "psr/log": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12",
+        "phpstan/phpstan": "^2.1",
+        "rector/rector": "^2.1"
+    },
+    "scripts": {
+        "phpunit": "vendor/bin/phpunit",
+        "phpstan": "vendor/bin/phpstan",
+        "rector": "vendor/bin/rector --dry-run",
+        "rector:fix": "vendor/bin/rector"
+    }
+}
