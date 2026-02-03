@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace DenyWhite\ClickLink\DataAccess;
 
-use DenyWhite\ClickLink\Connection\ClickHouseConnection;
+use DenyWhite\ClickLink\Connection\ClickHouseConnectionInterface;
 use DenyWhite\ClickLink\Protocol\ClickHouseQuery;
 use DenyWhite\ClickLink\Result\ClickHouseResult;
 use DenyWhite\ClickLink\Result\Parser\ClickHouseResultParser;
@@ -11,7 +11,7 @@ use DenyWhite\ClickLink\Result\Parser\ClickHouseResultParser;
 class ClickHouseDataReader
 {
     public function __construct(
-        private ClickHouseConnection $connection,
+        private ClickHouseConnectionInterface $connection,
         private ClickHouseResultParser $parser,
     )
     {

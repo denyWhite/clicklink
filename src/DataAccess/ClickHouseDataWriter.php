@@ -3,13 +3,13 @@ declare(strict_types=1);
 
 namespace DenyWhite\ClickLink\DataAccess;
 
-use DenyWhite\ClickLink\Connection\ClickHouseConnection;
+use DenyWhite\ClickLink\Connection\ClickHouseConnectionInterface;
 use DenyWhite\ClickLink\Protocol\ClickHouseQuery;
 
 class ClickHouseDataWriter
 {
     public function __construct(
-        private ClickHouseConnection $connection,
+        private ClickHouseConnectionInterface $connection,
     )
     {
     }
