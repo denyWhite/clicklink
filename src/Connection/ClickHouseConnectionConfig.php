@@ -20,6 +20,6 @@ readonly class ClickHouseConnectionConfig implements \Stringable
 
     public function __toString(): string
     {
-        return sprintf('%s:%d', $this->host, $this->port);
+        return \sprintf('%s:%d', $this->host, $this->port);
     }
 }
